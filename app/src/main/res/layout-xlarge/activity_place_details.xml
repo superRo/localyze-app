@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.roniti.localyze.ui.activities.PlaceDetails">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_bg"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@style/TransparentText"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/placeDetailsMainImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/placeDetailsImageDescription"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/gradientLayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/gradient_bg" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginEnd="10dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="start"
+                android:longClickable="false"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                app:layout_collapseMode="parallax">
+
+                <TextView
+                    android:id="@+id/placeDetailsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large"
+                    android:textSize="@dimen/activity_place_details_title_tablet"
+                    tools:text="Superba Food" />
+
+                <TextView
+                    android:id="@+id/placeDetailsOpenClosed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/activity_place_details_openclose_tablet"
+                    tools:text="Open Now" />
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_heart_24dp" />
+
+    <include layout="@layout/content_place_details" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.roniti.localyze.ui.activities.PlaceDetails"
+    tools:showIn="@layout/activity_place_details">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/placeDetailsRatingNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"
+            tools:text="4.2" />
+
+        <RatingBar
+            android:id="@+id/placeDetailsRatingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:numStars="5"
+            android:stepSize="0.5"
+            app:layout_constraintBottom_toBottomOf="@+id/placeDetailsRatingNumber"
+            app:layout_constraintLeft_toRightOf="@+id/placeDetailsRatingNumber"
+            app:layout_constraintStart_toEndOf="@+id/placeDetailsRatingNumber"
+            app:layout_constraintTop_toTopOf="@+id/placeDetailsRatingNumber" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/placeDetailsTopButtonsCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placeDetailsRatingNumber">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/callButtonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageView
+                        android:id="@+id/placeDetailsCallButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/descriptionCallButton"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_local_phone_24px" />
+
+                    <TextView
+                        android:id="@+id/placeDetailsCallButtonLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/callLabel"
+                        android:textSize="@dimen/text_tablet"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.512"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/placeDetailsCallButton" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/directionsButtonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageView
+                        android:id="@+id/placeDetailsDirectionsButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/descriptionDirectionsButton"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_directions_24dp" />
+
+                    <TextView
+                        android:id="@+id/placeDetailsDirectionsButtonLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/directionsLabel"
+                        android:textSize="@dimen/text_tablet"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.512"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/placeDetailsDirectionsButton" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/shareButtonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageView
+                        android:id="@+id/placeDetailsShareButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/descriptionShareButton"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_share_24dp" />
+
+                    <TextView
+                        android:id="@+id/placeDetailsShareButtonLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/shareLabel"
+                        android:textSize="@dimen/text_tablet"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/placeDetailsShareButton"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/websiteButtonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageView
+                        android:id="@+id/placeDetailsWebsiteButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/descriptionWebsiteButton"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_world_24px" />
+
+                    <TextView
+                        android:id="@+id/placeDetailsWebsiteButtonLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/websiteLabel"
+                        android:textSize="@dimen/text_tablet"
+                        android:textAppearance="@android:style/TextAppearance.Material.Small"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/detailsCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/placeDetailsTopButtonsCardView"
+            app:layout_constraintRight_toRightOf="@+id/placeDetailsTopButtonsCardView"
+            app:layout_constraintTop_toBottomOf="@+id/placeDetailsTopButtonsCardView">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <ImageView
+                    android:id="@+id/iconDescription"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/descriptionAddressImage"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_place_details_24dp" />
+
+                <TextView
+                    android:id="@+id/labelDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/addressLabel"
+                    android:textSize="@dimen/text_tablet"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconDescription"
+                    app:layout_constraintLeft_toRightOf="@+id/iconDescription"
+                    app:layout_constraintTop_toTopOf="@+id/iconDescription" />
+
+                <TextView
+                    android:id="@+id/placeDetailsAddressTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    app:layout_constraintBottom_toBottomOf="@+id/labelDescription"
+                    android:textSize="@dimen/text_tablet"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toRightOf="@+id/labelDescription"
+                    app:layout_constraintStart_toEndOf="@+id/labelDescription"
+                    app:layout_constraintTop_toTopOf="@+id/labelDescription"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="Address test 9, New York City, New York" />
+
+                <ImageView
+                    android:id="@+id/iconOpeningHours"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="32dp"
+                    android:contentDescription="@string/descriptionOpeningHoursImage"
+                    android:onClick="toggleOpeningHours"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/iconDescription"
+                    app:layout_constraintTop_toBottomOf="@+id/placeDetailsAddressTextView"
+                    app:srcCompat="@drawable/ic_access_time_24dp" />
+
+                <TextView
+                    android:id="@+id/labelOpeningHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:onClick="toggleOpeningHours"
+                    android:text="@string/opening_hoursLabel"
+                    android:textSize="@dimen/text_tablet"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconOpeningHours"
+                    app:layout_constraintLeft_toRightOf="@+id/iconOpeningHours"
+                    app:layout_constraintTop_toTopOf="@+id/iconOpeningHours" />
+
+                <TextView
+                    android:id="@+id/placeDetailsCurrentOpenHours"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:maxLines="3"
+                    android:onClick="toggleOpeningHours"
+                    android:textSize="@dimen/text_tablet"
+                    app:layout_constraintBottom_toBottomOf="@+id/labelOpeningHours"
+                    app:layout_constraintEnd_toStartOf="@+id/arrowToggle"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toRightOf="@+id/labelOpeningHours"
+                    app:layout_constraintStart_toEndOf="@+id/labelOpeningHours"
+                    app:layout_constraintTop_toTopOf="@+id/labelOpeningHours"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="10:00 AM – 6:00 PM" />
+
+                <ImageView
+                    android:id="@+id/arrowToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="0dp"
+                    android:contentDescription="@string/descriptionSeeMoreOpeningHoursImage"
+                    android:onClick="toggleOpeningHours"
+                    app:layout_constraintBottom_toBottomOf="@+id/labelOpeningHours"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/labelOpeningHours"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_down_24dp" />
+
+                <TextView
+                    android:id="@+id/placeDetailsAllOpeningHoursTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="7"
+                    android:visibility="gone"
+                    android:textSize="@dimen/text_tablet"
+                    app:layout_constraintLeft_toLeftOf="@+id/labelOpeningHours"
+                    app:layout_constraintTop_toBottomOf="@+id/placeDetailsCurrentOpenHours"
+                    tools:text="Monday: 10:00 AM – 6:00 PM\nTuesday: 10:00 AM – 6:00 PM\nWednesday: 10:00 AM – 6:00 PM\nThursday: 10:00 AM – 6:00 PM\nFriday: 10:00 AM – 6:00 PM\nSaturday: Closed\nSunday: Closed" />
+
+                <ImageView
+                    android:id="@+id/iconPhoneSmall"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="32dp"
+                    android:contentDescription="@string/descriptionPhoneNumberImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/iconDescription"
+                    app:layout_constraintTop_toBottomOf="@+id/placeDetailsAllOpeningHoursTextView"
+                    app:srcCompat="@drawable/ic_local_phone_24px" />
+
+                <TextView
+                    android:id="@+id/phoneLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/phoneLabel"
+                    android:textSize="@dimen/text_tablet"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconPhoneSmall"
+                    app:layout_constraintLeft_toRightOf="@+id/iconPhoneSmall"
+                    app:layout_constraintTop_toTopOf="@+id/iconPhoneSmall" />
+
+                <TextView
+                    android:id="@+id/placeDetailsPhoneTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="@dimen/text_tablet"
+                    app:layout_constraintBottom_toBottomOf="@+id/phoneLabel"
+                    app:layout_constraintLeft_toRightOf="@+id/phoneLabel"
+                    app:layout_constraintTop_toTopOf="@+id/phoneLabel"
+                    tools:text="+972 54 239 2019" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/infoCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/detailsCardView"
+            app:layout_constraintRight_toRightOf="@+id/detailsCardView"
+            app:layout_constraintTop_toBottomOf="@+id/detailsCardView">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/seeMorePicturesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:linksClickable="false"
+                    android:text="@string/more_pictures_and_info"
+                    android:textSize="@dimen/text_tablet"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/descriptionArrowSeeMoreImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_forward_24dp" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

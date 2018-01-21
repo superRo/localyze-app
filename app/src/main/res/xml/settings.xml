@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/generalLabel">
+
+        <ListPreference
+            android:defaultValue="km"
+            android:entries="@array/measurement_label"
+            android:entryValues="@array/measurement_unit_values"
+            android:key="measurement_unit_key"
+            android:summary="%s"
+            android:title="@string/measurementUnitTitleLabel" />
+
+        <ListPreference
+            android:defaultValue="#ff4081"
+            android:entries="@array/color_label"
+            android:entryValues="@array/color_values"
+            android:key="color_choice_key"
+            android:summary="%s"
+            android:title="@string/colorChoiceLabel" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="@string/favoritesLabel">
+
+        <Preference
+            android:key="deleteFavesFromSettingsKey"
+            android:summary="@string/deleteSummary"
+            android:title="@string/deleteFavoritesLabel" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/applicationLabel">
+
+        <Preference
+            android:key="aboutKey"
+            android:title="@string/aboutLabel"></Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>

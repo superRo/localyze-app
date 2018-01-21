@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- General -->
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+
+    <!-- Category dialog -->
+    <dimen name="category_dialog_width_landscape">425dp</dimen>
+    <dimen name="category_dialog_height_landscape">450dp</dimen>
+
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <ImageView
+        android:id="@+id/listCategoryImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/descriptionImageCategory"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat_cafe" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/listDistance"
+        app:layout_constraintStart_toEndOf="@+id/listCategoryImage"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/listRestaurantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textSize="@dimen/text_tablet"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:text="Location name" />
+
+        <TextView
+            android:id="@+id/listRestaurantAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="left"
+            android:textSize="@dimen/text_tablet"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="27dp"
+            tools:text="Location address" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/listDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayoutInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayoutInfo"
+        tools:text="3.6 km" />
+
+    <View
+        android:id="@+id/dividerLightRowRow"
+        style="@style/DividerLight"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/favoritesHeartSignRow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/favoriteSymbol"
+        android:scaleType="fitCenter"
+        android:tint="@color/colorAccent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/listCategoryImage"
+        app:layout_constraintEnd_toEndOf="@+id/listCategoryImage"
+        app:srcCompat="@drawable/ic_heart_24dp" />
+
+</android.support.constraint.ConstraintLayout>

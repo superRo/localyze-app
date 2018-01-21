@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pmnuRadius"
+        android:icon="@drawable/ic_place_24dp"
+        android:title="@string/select_radius" />
+    <item
+        android:id="@+id/pmnuCategory"
+        android:icon="@drawable/ic_view_module_24dp"
+        android:title="@string/filter_by_category" />
+</menu>

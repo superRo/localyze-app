@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/aboutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:text="@string/aboutLabel"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/flat_ripple_circle"
+        android:contentDescription="@string/closeContentDescription"
+        android:cropToPadding="true"
+        android:padding="8dp"
+        android:tint="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewAbout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_black" />
+
+    <ScrollView
+        android:id="@+id/scrollViewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_color_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/appNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/app_name"
+                    android:textColor="#666"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/logoInAbout"
+                    app:layout_constraintTop_toTopOf="@+id/logoInAbout" />
+
+                <TextView
+                    android:id="@+id/appVersionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/app_version"
+                    android:textColor="#aaa"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/logoInAbout"
+                    app:layout_constraintStart_toStartOf="@+id/appNameLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameLabel" />
+
+                <ImageView
+                    android:id="@+id/logoInAbout"
+                    android:layout_width="55dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="24dp"
+                    android:adjustViewBounds="false"
+                    android:contentDescription="@string/logoDescription"
+                    android:cropToPadding="false"
+                    android:scaleType="fitStart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/localyze_launcher_sm_round" />
+
+                <TextView
+                    android:id="@+id/creditsLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/app_credits"
+                    android:textColor="#444"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerLightRow" />
+
+                <View
+                    android:id="@+id/dividerLightRow"
+                    style="@style/DividerLight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/creditsTextView" />
+
+                <TextView
+                    android:id="@+id/aboutContentTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/appAboutContent"
+                    android:textColor="#444"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logoInAbout" />
+
+                <TextView
+                    android:id="@+id/creditsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/creditsLabel"
+                    android:textColor="#888"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aboutContentTextView" />
+
+                <TextView
+                    android:id="@+id/termsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:text="@string/termsAndConditions"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/creditsLabel" />
+
+                <ImageView
+                    android:id="@+id/poweredByGoogleImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/termsTextView"
+                    app:srcCompat="@drawable/powered_by_google_on_white" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,111 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.roniti.localyze.ui.fragments.TopToolBar">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/toolbarConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorAccent">
+
+        <FrameLayout
+            android:id="@+id/searchFrame"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/white"
+            android:paddingEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/querySearchView"
+            app:layout_constraintEnd_toStartOf="@+id/gpsButton"
+            app:layout_constraintTop_toTopOf="@+id/querySearchView">
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/descriptionSearchImage"
+                android:elevation="0dp"
+                android:scaleType="fitXY"
+                android:tooltipText="@string/descriptionSearchImage"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_search_black_24dp" />
+
+        </FrameLayout>
+
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/descriptionMenuButton"
+            android:scaleType="fitCenter"
+            android:tooltipText="@string/descriptionMenuButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_menu_24dp" />
+
+        <SearchView
+            android:id="@+id/querySearchView"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:focusable="false"
+            android:iconifiedByDefault="false"
+            android:inputType="text"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="Search..."
+            android:searchIcon="@null"
+            android:textColorHint="@color/common_google_signin_btn_text_light_disabled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/searchFrame"
+            app:layout_constraintStart_toEndOf="@+id/menuButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/gpsButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/descriptionFindLocationsNearbyButton"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:tooltipText="@string/descriptionFindLocationsNearbyButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filterButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/person_pin_symbol_24dp" />
+
+        <ImageButton
+            android:id="@+id/filterButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/descriptionFilterSearchButton"
+            android:scaleType="fitXY"
+            android:tooltipText="@string/descriptionFilterSearchButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_tuner_24dp_white" />
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

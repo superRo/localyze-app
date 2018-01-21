@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/personalizationLabel">
+        <menu>
+
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_24dp"
+                android:title="@string/title_settings" />
+
+        </menu>
+    </item>
+
+
+    <item android:title="@string/applicationLabel">
+        <menu>
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info_outline_24dp"
+                android:title="@string/aboutLabel" />
+
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_review_24dp"
+                android:title="@string/rate_this_app" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/communicateLabel">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/shareLabel" />
+
+        </menu>
+    </item>
+
+</menu>

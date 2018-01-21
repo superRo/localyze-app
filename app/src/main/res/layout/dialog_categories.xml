@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/categoryTitle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorAccent"
+        android:contentDescription="@string/searchByCategoryLabel"
+        android:gravity="center_vertical"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:text="@string/searchByCategoryLabel"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/closeCategoryButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/flat_ripple_circle"
+        android:contentDescription="@string/closeContentDescription"
+        android:cropToPadding="true"
+        android:padding="8dp"
+        android:tint="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/categoryTitle"
+        app:srcCompat="@drawable/ic_close_black" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/categoriesRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadeScrollbars="false"
+        android:scrollbarFadeDuration="0"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryTitle" />
+
+</android.support.constraint.ConstraintLayout>

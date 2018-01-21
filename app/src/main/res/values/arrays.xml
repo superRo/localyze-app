@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="measurement_unit_label">measurement_unit_values</string-array>
+
+    <integer-array name="searchRadiusValuesMeters">
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>20000</item>
+        <item>50000</item>
+    </integer-array>
+
+    <integer-array name="searchRadiusValuesYardsInMeters">
+        <item>92</item>
+        <item>183</item>
+        <item>458</item>
+        <item>1610</item>
+        <item>3219</item>
+        <item>8047</item>
+        <item>16094</item>
+        <item>32187</item>
+        <item>48281</item>
+    </integer-array>
+
+    <string-array name="categoryTypeValues">
+        <item>airport</item>
+        <item>atm</item>
+        <item>bank</item>
+        <item>bar</item>
+        <item>cafe</item>
+        <item>lodging</item>
+        <item>place_of_worship</item>
+        <item>gas_station</item>
+        <item>hospital</item>
+        <item>gym</item>
+        <item>movie_theater</item>
+        <item>parking</item>
+        <item>restaurant</item>
+        <item>park</item>
+        <item>school</item>
+        <item>zoo</item>
+        <item>bus_station</item>
+        <item>store</item>
+        <item>electrician</item>
+        <item>amusement_park</item>
+        <item>beauty_salon</item>
+        <item>fire_station</item>
+        <item>museum</item>
+        <item>car_wash</item>
+    </string-array>
+
+    <string-array name="categoryTypes">
+        <item>Airport</item>
+        <item>ATM</item>
+        <item>Bank</item>
+        <item>Bar</item>
+        <item>Cafe</item>
+        <item>Lodging</item>
+        <item>Worship</item>
+        <item>Gas</item>
+        <item>Health</item>
+        <item>Gym</item>
+        <item>Cinema</item>
+        <item>Parking</item>
+        <item>Restaurant</item>
+        <item>Park</item>
+        <item>School</item>
+        <item>Zoo</item>
+        <item>Transport</item>
+        <item>Store</item>
+        <item>Service</item>
+        <item>Activity</item>
+        <item>Salon</item>
+        <item>Station</item>
+        <item>Establishment</item>
+        <item>Car</item>
+    </string-array>
+
+
+</resources>
